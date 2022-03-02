@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Worldclock</title>
+</head>
+<body>
+<h1>Digital World Clock</h1>
+<div class="container">
+  <div id="digital-clock" class="digital-clock">
+    <span id="time" class="time">##:##:##</span>
+    <span id="UTC" class="UTC"></span>
+    <span id="DST" class="UTC"></span>
+  </div>
+  <div class="timezone">
+    <span id="timezone-continent" class="timezone-continent"></span>
+    <span id="timezone-city" class="timezone-city"></span>
+  </div>
+  <div class="timezone-dropdown-container">
+    <select name="dropdown" id="dropdown" class="timezone-dropdown">
+      <option value="America/New_York">America (East Coast)</option>
+      <option value="America/Los_Angeles">America (West Coast)</option>
+      <option value="Europe/Copenhagen">Europe (Copenhagen)</option>
+      <option value="Africa/Johannesburg">Africa (Johannesburg)</option>
+      <option value="Asia/Bangkok">Asia (Bangkok)</option>
+      <option value="Australia/Sydney">Australia (Sydney)</option>
+    </select>
+  </div>
+</div>
+  <script src="js/script.js"></script>
+</body>
+</html>
