@@ -23,7 +23,6 @@ function worldtimeapiFetch() {
       let offset = res.raw_offset / 60 / 60;    //offset in hours
       let dstoffset = res.dst_offset / 60 / 60;  //daytime saving offset in hours
       let zonecity = res.timezone;
-
       time.innerText = formatTime(dateObj, offset + dstoffset);
       if (zonecity != undefined) {
         let cityName = zonecity.split('/')[1];
@@ -46,7 +45,9 @@ function formatTime(dateObj, offset) {
   let seconds = dateObj.getUTCSeconds();
   let hours = dateObj.getUTCHours() + offset;
   let minutes = dateObj.getUTCMinutes();
-
+  if (hours > 24){
+    hours = hours - 24;
+  }
   if (hours < 10) {
     hours = "0" + hours;
   }
